@@ -1,0 +1,36 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+:root {
+    --primary-color: #6556f1;
+    --secondary-color: #d14;
+    --text-color: #333;
+    --light-text: #666;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --hover-color: rgba(255, 255, 255, 0.1);
+}
+
