@@ -4,84 +4,272 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IoT Security Laboratory - KOOKMIN UNIVERSITY</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/sidebar.css">
-    <link rel="stylesheet" href="css/content.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <!-- style.css 와 연결 짓는 부분 -->
+    <link rel = "stylesheet" href = "css/style.css">
 </head>
-<body>
-    <div class="container">
-        <!-- 왼쪽 사이드바 -->
-        <nav class="sidebar">
-            <div class="logo">
-                <img src="images/logo.png" alt="IoT Security Lab Logo">
-                <div class="logo-text">
-                    <h1>IoT Security Lab.</h1>
-                    <p>KOOKMIN UNIVERSITY</p>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav id="main-nav" class="bg-white shadow-md fixed w-full z-10">
+        <div class="container"> 
+            <div class="flex items-center justify-between h-full w-full"> <!-- w-full 추가 -->
+                <!-- 왼쪽 로고 -->
+                <div class="flex-shrink-0">
+                    <span class="text-3xl font-semibold text-gray-800">IoT Security Lab</span>
+                </div>
+                <!-- 오른쪽 메뉴 아이템들 -->
+                <div class="nav-menu hidden md:flex items-center justify-end flex-1"> <!-- justify-end와 flex-1 추가 -->
+                    <a href="#home" class="nav-link text-gray-700 hover:text-gray-900">Home</a>
+                    <a href="#research" class="nav-link text-gray-700 hover:text-gray-900">연구분야</a>
+                    <a href="#publications" class="nav-link text-gray-700 hover:text-gray-900">논문</a>
+                    <a href="#patents" class="nav-link text-gray-700 hover:text-gray-900">특허</a>
+                    <a href="#members" class="nav-link text-gray-700 hover:text-gray-900">구성원</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-gray-900">연락처</a>
                 </div>
             </div>
-            <ul class="nav-menu">
-                <li><a href="#home">홈</a></li>
-                <li><a href="#about">IoT 보안 연구실 소개</a></li>
-                <li><a href="#members">구성원</a></li>
-                <li><a href="#research">연구분야</a></li>
-                <li><a href="#papers">논문</a></li>
-                <li><a href="#achievements">성과</a></li>
-                <li><a href="#news">연구실 소식</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-        </nav>
+        </div>
+    </nav>
 
-        <!-- 메인 콘텐츠 영역 -->
-        <main class="main-content">
-            <h2 class="page-title">성과</h2>
-            <ul class="achievements">
-                <li>
-                    <span class="achievement-title">2025 TCHES 논문 게재</span>
-                    <p class="achievement-content">"A Framework for Generating S-Box Circuits with Boyer-Peralta Algorithm-Based Heuristics, and Its Applications to AES, SNOW3G, and Saturnin"</p>
-                </li>
-                
-                <li>
-                    <span class="achievement-title">2024 국가암호공모전 국가정보원장상 및 다수 수상</span>
-                    <p class="achievement-content">정보보안암호수학과 학생들 <a href="#" class="link">[LINK]</a></p>
-                </li>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section min-h-screen flex items-center pt-16">
+        <div class="container mx-auto px-6 py-24">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 text-white">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                        IoT Security Research
+                    </h1>
+                    <p class="text-xl mb-8">
+                        5G 특화망 보안, 드론 보안, qSIM 인증 시스템,<br>
+                        암호모듈 개발을 선도하는 연구실
+                    </p>
+                    <a href="#research" class="bg-emerald-500 text-white px-8 py-3 rounded-lg hover:bg-emerald-600 transition-colors">
+                        연구 분야 살펴보기
+                    </a>
+                </div>
+                <div class="md:w-1/2 mt-12 md:mt-0">
+                    <img src="/api/placeholder/600/400" alt="IoT Security Illustration" class="w-full h-auto rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <li>
-                    <span class="achievement-title">IEEE Internet of Things Journal 논문 게재</span>
-                    <p class="achievement-content">"On Impossible and Truncated Distinguishers for IoT-Friendly AEAD Algorithms"</p>
-                    <span class="impact-factor">Impact Factor: 8.2</span>
-                </li>
+    <!-- Research Areas -->
+    <section id="research" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">주요 연구 분야</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">5G 특화망 보안</h3>
+                    <p class="text-gray-600">5G 특화망의 보안 취약점 분석 및 대응 방안 연구</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">드론 보안</h3>
+                    <p class="text-gray-600">드론 시스템의 보안성 강화 및 취약점 분석 연구</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">qSIM 인증</h3>
+                    <p class="text-gray-600">차세대 인증 시스템 qSIM 개발 및 구현</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">암호모듈 개발</h3>
+                    <p class="text-gray-600">안전한 암호모듈 설계 및 구현 연구</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <li>
-                    <span class="achievement-title">Computer Modeling in Engineering & Sciences 논문 게재</span>
-                    <p class="achievement-content">"A Novel Framework to Construct S-Box Quantum Circuits Using System Modeling: Application to 4-Bit S-Boxes"</p>
-                    <span class="impact-factor">Impact Factor: 2.2</span>
-                </li>
+    <!-- Publications Section -->
+    <section id="publications" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">논문 실적</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="publication-card bg-white p-6 rounded-lg shadow-lg">
+                    <span class="text-sm text-emerald-600 font-semibold">국제 저널</span>
+                    <h3 class="text-xl font-semibold mt-2">5G 특화망 드론 운영 시스템 중 인증 시스템 보안</h3>
+                    <p class="text-gray-600 mt-2">김형엽, 위한샘, 이옥연</p>
+                </div>
+                <div class="publication-card bg-white p-6 rounded-lg shadow-lg">
+                    <span class="text-sm text-emerald-600 font-semibold">정보보호학회</span>
+                    <h3 class="text-xl font-semibold mt-2">5G 특화망과 M-BcN망 연동 시 모바일 업무 환경 보안 기법 연구</h3>
+                    <p class="text-gray-600 mt-2">김찬혁, 김형엽, 위한샘, 이옥연</p>
+                </div>
+                <div class="publication-card bg-white p-6 rounded-lg shadow-lg">
+                    <span class="text-sm text-emerald-600 font-semibold">TEST Journal</span>
+                    <h3 class="text-xl font-semibold mt-2">김치를 맛있게 먹는 방법</h3>
+                    <p class="text-gray-600 mt-2">김치맨, 방구맨, 이옥연</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <li>
-                    <span class="achievement-title">2024 한국디지털포렌식학회 하계학술대회 한국저작권보호장상 수상</span>
-                    <p class="achievement-content">"네이버 웹 생태계에 대한 포렌식인 아티팩트 분석"</p>
-                </li>
+    <!-- Patents Section -->
+    <section id="patents" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">특허</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="publication-card bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+                    <span class="text-sm text-blue-600 font-semibold">등록특허 10-2024-0123456</span>
+                    <h3 class="text-xl font-semibold mt-2">드론 제어 시스템의 보안 인증 방법</h3>
+                    <p class="text-gray-600 mt-2">출원일: 2024.01.15</p>
+                </div>
+                <div class="publication-card bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+                    <span class="text-sm text-blue-600 font-semibold">등록특허 10-2024-0123457</span>
+                    <h3 class="text-xl font-semibold mt-2">qSIM 기반 IoT 기기 인증 시스템</h3>
+                    <p class="text-gray-600 mt-2">출원일: 2024.02.20</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <li>
-                    <span class="achievement-title">2024 한국정보보호학회 하계학술대회 국가보안기술연구소 소장상 수상</span>
-                    <p class="achievement-content">"블록암호 MGFN의 전체 라운드에 대한 선형 공격"</p>
-                </li>
+    <!-- Team Members -->
+    <section id="members" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">구성원 소개</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <div class="team-member-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Professor" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold">이옥연 교수</h3>
+                        <p class="text-gray-600">연구실 책임자</p>
+                        <p class="text-sm text-gray-500 mt-2">정보보안암호수학과</p>
+                    </div>
+                </div>
+                <div class="team-member-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Researcher" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold">윤승환</h3>
+                        <p class="text-gray-600">연구 교수</p>
+                        <p class="text-sm text-gray-500 mt-2">모든 분야 다</p>
+                    </div>
+                </div>
+                <div class="team-member-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Researcher" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold">전무님</h3>
+                        <p class="text-gray-600">전무</p>
+                        <p class="text-sm text-gray-500 mt-2">H/W 개발</p>
+                    </div>
+                </div>
+                <div class="team-member-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Researcher" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold">위한샘</h3>
+                        <p class="text-gray-600">연구 교수</p>
+                        <p class="text-sm text-gray-500 mt-2">모든 분야 다</p>
+                    </div>
+                </div>
+                <div class="team-member-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Researcher" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold">장찬국</h3>
+                        <p class="text-gray-600">연구 교수</p>
+                        <p class="text-sm text-gray-500 mt-2">모든 분야 다</p>
+                    </div>
+                </div>
+                <div class="team-member-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Researcher" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold">김형엽</h3>
+                        <p class="text-gray-600">박사 과정</p>
+                        <p class="text-sm text-gray-500 mt-2">모든 분야 다</p>
+                    </div>
+                </div>
+                <div class="team-member-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Researcher" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold">윤혜진</h3>
+                        <p class="text-gray-600">박사 과정</p>
+                        <p class="text-sm text-gray-500 mt-2">모든 분야 다</p>
+                    </div>
+                </div>
+                <div class="team-member-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Researcher" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold">김찬혁</h3>
+                        <p class="text-gray-600">학부 연구생</p>
+                        <p class="text-sm text-gray-500 mt-2">잡일</p>
+                    </div>
+                </div>
+                <div class="team-member-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Researcher" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold">임진한</h3>
+                        <p class="text-gray-600">학부 연구생</p>
+                        <p class="text-sm text-gray-500 mt-2">잡일 + 잡일</p>
+                    </div>
+                </div>
+                <div class="team-member-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/300/300" alt="Researcher" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold">전성환</h3>
+                        <p class="text-gray-600">학부 연구생</p>
+                        <p class="text-sm text-gray-500 mt-2">잡일 + 잡일 + 잡일</p>
+                    </div>
+                </div>
 
-                <li>
-                    <span class="achievement-title">김찬혁 연구원, 우수신진연구자 한국인터넷진흥원 원장상 수상</span>
-                </li>
+            </div>
+        </div>
+    </section>
 
-                <li>
-                    <span class="achievement-title">arXiv 논문 등록</span>
-                    <p class="achievement-content">"A Method for Decrypting Data Infected with Rhysida Ransomware"</p>
-                    <a href="https://arxiv.org/abs/2402.06440" class="link" target="_blank">[LINK]</a>
-                </li>
-            </ul>
-        </main>
-    </div>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">연락처</h2>
+            <div class="max-w-2xl mx-auto">
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold mb-2">위치</h3>
+                        <p class="text-gray-600">서울특별시 성북구 정릉로 77 국민대학교</p>
+                        <p class="text-gray-600">과학관 318호, 산학협력단 115, 116호</p>
+                    </div>
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold mb-2">이메일</h3>
+                        <p class="text-gray-600">iot.security@kookmin.ac.kr</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">전화</h3>
+                        <p class="text-gray-600">02-???-????</p>
+                    </div>
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold mb-2">이메일</h3>
+                        <p class="text-gray-600">iot.security@kookmin.ac.kr</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script src="js/main.js"></script>
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Navigation highlight on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.pageYOffset >= sectionTop - 60) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-emerald-500');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('text-emerald-500');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
