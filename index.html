@@ -19,13 +19,13 @@
                 </div>
                 <!-- 오른쪽 메뉴 아이템들 -->
                 <div class="nav-menu hidden md:flex items-center justify-end flex-1"> <!-- justify-end와 flex-1 추가 -->
-                    <a href="#home" class="nav-link text-gray-700 hover:text-gray-900">Home</a>
-                    <a href="#research" class="nav-link text-gray-700 hover:text-gray-900">연구분야</a>
-                    <a href="#publications" class="nav-link text-gray-700 hover:text-gray-900">논문</a>
-                    <a href="#patents" class="nav-link text-gray-700 hover:text-gray-900">특허</a>
-                    <a href="#members" class="nav-link text-gray-700 hover:text-gray-900">구성원</a>
-                    <a href="#album" class="nav-link text-gray-700 hover:text-gray-900">앨범</a>
-                    <a href="#contact" class="nav-link text-gray-700 hover:text-gray-900">연락처</a>
+                    <a href="#home" class="nav-link text-gray-700 hover:text-gray-900">HOME</a>
+                    <a href="#research" class="nav-link text-gray-700 hover:text-gray-900">RESEARCH</a>
+                    <a href="#publications" class="nav-link text-gray-700 hover:text-gray-900">JOURNAL</a>
+                    <a href="#patents" class="nav-link text-gray-700 hover:text-gray-900">PATENT</a>
+                    <a href="#members" class="nav-link text-gray-700 hover:text-gray-900">MEMBERS</a>
+                    <a href="#album" class="nav-link text-gray-700 hover:text-gray-900">ALBUM</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-gray-900">ABOUT</a>
                 </div>
             </div>
         </div>
@@ -47,9 +47,9 @@
                         연구 분야 살펴보기
                     </a>
                 </div>
-                <div class="md:w-1/2 mt-12 md:mt-0">
-                    <img src="/images/iot-security.png" alt="IoT Security Illustration" class="w-full h-auto rounded-lg shadow-xl">
-                </div>
+                <!-- <div class="md:w-1/2 mt-12 md:mt-0">
+                    <img src="/images/bg-infront.png" alt="IoT Security Illustration" class="w-full h-auto rounded-lg shadow-xl">
+                </div> -->
             </div>
         </div>
     </section>
@@ -95,11 +95,41 @@
                     <p class="text-gray-600 mt-2">김찬혁, 김형엽, 위한샘, 이옥연</p>
                 </div>
                 <div class="publication-card bg-white p-6 rounded-lg shadow-lg">
-                    <span class="text-sm text-emerald-600 font-semibold">TEST Journal</span>
-                    <h3 class="text-xl font-semibold mt-2">김치를 맛있게 먹는 방법</h3>
-                    <p class="text-gray-600 mt-2">김치맨, 방구맨, 이옥연</p>
+                    <span class="text-sm text-emerald-600 font-semibold">정보보호학회</span>
+                    <h3 class="text-xl font-semibold mt-2">5G 특화망과 M-BcN망 연동 시 모바일 업무 환경 보안 기법 연구</h3>
+                    <p class="text-gray-600 mt-2">김찬혁, 김형엽, 위한샘, 이옥연</p>
+                </div>
+                <div class = "a"> </div>
+                <div class = "a"> </div>
+            </div>
+        </div>
+
+        
+        <!-- 수상 경력 추가 -->
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">수상 경력</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="publication-card bg-white p-6 rounded-lg shadow-lg">
+                    <span class="text-sm text-emerald-600 font-semibold">COSS</span>
+                    <h3 class="text-xl font-semibold mt-2">차세대 통신 COSS 협의회장상</h3>
+                    <p class="text-gray-600 mt-2">김찬혁, 임진한</p>
+                </div>
+                <div class="publication-card bg-white p-6 rounded-lg shadow-lg">
+                    <span class="text-sm text-emerald-600 font-semibold">정보보호학회</span>
+                    <h3 class="text-xl font-semibold mt-2">2024 동계 학술 대회 논문 우수상</h3>
+                    <p class="text-gray-600 mt-2">김찬혁, 김형엽, 위한샘, 이옥연</p>
                 </div>
             </div>
+        </div>
+
+        <!-- 더보기 기능 추가 -->
+        <div class="more-button-container">
+            <a href="journal.html" class="more-button-link">
+                <span>more</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+            </a>
         </div>
     </section>
 
@@ -125,7 +155,7 @@
     <!-- Team Members -->
     <section id="members" class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-16">구성원 소개</h2>
+            <h2 class="text-3xl font-bold text-center mb-16">Current Members</h2>
             
             <!-- 연구실 책임자 섹션 -->
             <div class="mb-16">
@@ -229,6 +259,16 @@
                     </div>
                 </div>
             </div>
+
+            <!-- 더보기 기능 추가 -->
+            <div class="more-button-container">
+                <a href="alumni.html" class="more-button-link">
+                    <span>Alumni</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -266,14 +306,9 @@
         <!-- Contact Section -->
         <section id="contact" class="py-10 bg-gray-50">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-16">연락처</h2>
+                <h2 class="text-3xl font-bold text-center mb-16">About</h2>
                 <div class="max-w-2xl mx-auto">
                     <div class="bg-white rounded-lg shadow-lg p-8">
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold mb-2">위치</h3>
-                            <p class="text-gray-600">서울특별시 성북구 정릉로 77 국민대학교</p>
-                            <p class="text-gray-600">과학관 318호, 산학협력단 115, 116호</p>
-                        </div>
                         <div class="mb-6">
                             <h3 class="text-xl font-semibold mb-2">이메일</h3>
                             <p class="text-gray-600">iot.security@kookmin.ac.kr</p>
@@ -281,10 +316,6 @@
                         <div>
                             <h3 class="text-xl font-semibold mb-2">전화</h3>
                             <p class="text-gray-600">02-???-????</p>
-                        </div>
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold mb-2">이메일</h3>
-                            <p class="text-gray-600">iot.security@kookmin.ac.kr</p>
                         </div>
                     </div>
                 </div>
