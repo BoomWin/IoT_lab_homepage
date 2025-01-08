@@ -41,8 +41,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// 모바일 메뉴 토글 기능
-const toggleMobileMenu = () => {
-    const navMenu = document.querySelector('.nav-menu');
-    navMenu.classList.toggle('active');
-};

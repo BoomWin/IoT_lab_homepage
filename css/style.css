@@ -133,19 +133,21 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* 더보기 버튼을 위한 컨테이너 스타일 */
 .more-button-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;  /* 중앙 정렬로 변경 */
     padding: 2rem 0;
     margin-top: 2rem;
+    width: 100%;             /* 전체 너비 사용 */
 }
 
 .more-button-link {
-    display : inline-flex;
-    align-items : center;
-    color : #059669; /* 버튼 색상 */
+    display: inline-flex;
+    align-items: center;
+    color: #059669; /* emerald-600 */
     transition: color 0.2s;
+    margin-left: auto;       /* 왼쪽 자동 여백으로 오른쪽 정렬 */
+    margin-right: 8rem;      /* 오른쪽 여백 추가 */
 }
 
 .more-button-link:hover {
@@ -156,12 +158,18 @@ body {
     margin-right: 0.5rem;
 }
 
-/* svg 아이콘 스타일 */
+/* SVG 아이콘 스타일링 */
 .more-button-link svg {
     width: 1.5rem;
     height: 1.5rem;
 }
 
+/* 반응형 디자인을 위한 미디어 쿼리 */
+@media (max-width: 768px) {
+    .more-button-link {
+        margin-right: 2rem;  /* 모바일에서는 여백 줄이기 */
+    }
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
