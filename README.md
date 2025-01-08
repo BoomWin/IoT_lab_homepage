@@ -2,7 +2,8 @@
 
 <div align="center">
 
-![IoT Security Lab Banner](/images/IoTbg.jpg)
+![image](https://github.com/user-attachments/assets/19e92475-c2d4-4b16-a7f4-11075a5137ee)
+
 
 **국민대학교 IoT 보안 연구실 공식 웹사이트**  
 *KOOKMIN UNIVERSITY IoT Security Laboratory*
