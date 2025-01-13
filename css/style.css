@@ -185,3 +185,67 @@ body {
         padding: 3rem 0;
     }
 }
+
+/* 기존 style.css 파일 맨 아래에 추가 */
+
+/* 모바일 대응 스타일 */
+@media screen and (max-width: 768px) {
+    /* 컨테이너 여백 조정 */
+    .container {
+        padding: 0 1rem;
+    }
+
+    /* 네비게이션 메뉴 */
+    .nav-menu {
+        display: none;
+    }
+
+    /* 모바일 그리드 조정 */
+    .grid-cols-1,
+    .grid-cols-2,
+    .grid-cols-3,
+    .grid-cols-4,
+    .md\:grid-cols-2,
+    .md\:grid-cols-3,
+    .lg\:grid-cols-3,
+    .lg\:grid-cols-4 {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+
+    /* 섹션 간격 조정 */
+    .mb-16 {
+        margin-bottom: 2rem !important;
+    }
+
+    .gap-8 {
+        gap: 1rem !important;
+    }
+
+    /* 텍스트 크기 조정 */
+    .text-4xl {
+        font-size: 2rem !important;
+    }
+
+    .text-3xl {
+        font-size: 1.75rem !important;
+    }
+
+    .text-2xl {
+        font-size: 1.5rem !important;
+    }
+
+    .text-xl {
+        font-size: 1.25rem !important;
+    }
+}
+
+/* 태블릿 대응 스타일 */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .lg\:grid-cols-3 {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .lg\:grid-cols-4 {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
